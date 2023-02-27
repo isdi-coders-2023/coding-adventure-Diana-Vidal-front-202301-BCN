@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 
 describe("Given a Button component", () => {
-  describe("When it rendred", () => {
+  describe("When it is rendred with the text 'Sign up'", () => {
     test("Then it should return a button with text 'Sign up'", () => {
       const buttonText = "Sign up";
 
