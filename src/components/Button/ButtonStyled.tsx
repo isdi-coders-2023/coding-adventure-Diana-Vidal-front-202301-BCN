@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
-  background-color: #cccf18;
+  background-color: ${(props) => props.theme.colorButton};
   width: 323.02px;
   height: 40px;
   border-radius: 10px;
-  font-family: "Saira Stencil One";
-  font-size: 20px;
-  color: #1e1e1e;
+  font-family: ${(props) => props.theme.mainFontFamily};
+  font-size: ${(props) => props.theme.sizeFontButton};
+  color: ${(props) => props.theme.fontColor};
   :disabled {
     opacity: 0.57;
   }
