@@ -1,15 +1,19 @@
-import FormStyled from "./FormStyled";
+import Button from "../Button/Button";
 
-const Form = (): JSX.Element => {
+interface FormProps {
+  submitForm: () => void;
+}
+
+const Form = ({ submitForm }: FormProps): JSX.Element => {
   return (
-    <FormStyled>
+    <>
       <h2>Register for the event</h2>
-      <form>
+      <form className="formContainer">
         <label htmlFor="email">
           Email
           <input id="email" type="text" placeholder="Introduce your email" />
         </label>
-        <label htmlFor="">
+        <label htmlFor="password">
           Password
           <input
             id="password"
@@ -19,10 +23,11 @@ const Form = (): JSX.Element => {
         </label>
         <label htmlFor="image">
           Image
-          <input id="image" type="text" placeholder="Introduce an image" />
+          <input id="image" type={"file"} placeholder="Introduce an image" />
         </label>
+        <Button text="Sign up" />
       </form>
-    </FormStyled>
+    </>
   );
 };
 
