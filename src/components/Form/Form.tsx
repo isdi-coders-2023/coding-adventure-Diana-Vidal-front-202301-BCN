@@ -7,7 +7,7 @@ interface FormProps {
 const Form = ({ submitForm }: FormProps): JSX.Element => {
   return (
     <>
-      <form className="form__container">
+      <form className="form">
         <label>
           Email
           <input type="email" placeholder="Introduce your email" />
