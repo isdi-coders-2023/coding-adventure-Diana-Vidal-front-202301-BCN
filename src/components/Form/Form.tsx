@@ -1,11 +1,7 @@
 import Button from "../Button/Button";
 import FormStyled from "./FormStyled";
 
-interface FormProps {
-  submitForm: () => void;
-}
-
-const Form = ({ submitForm }: FormProps): JSX.Element => {
+const Form = (): JSX.Element => {
   return (
     <FormStyled>
       <form className="form">
