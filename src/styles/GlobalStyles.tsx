@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +11,7 @@ body {
   font-family: 'Work Sans', sans serif;
   min-height:100vh;
   border: none;
+  background-color: #000;
 
 }
 
@@ -34,6 +36,7 @@ h2 {
   margin: 0;
 
 }
+
 `;
 
 export default GlobalStyles;
