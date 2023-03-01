@@ -7,23 +7,18 @@ interface FormProps {
 const Form = ({ submitForm }: FormProps): JSX.Element => {
   return (
     <>
-      <h2>Register for the event</h2>
-      <form className="formContainer">
-        <label htmlFor="email">
+      <form className="form__container">
+        <label>
           Email
-          <input id="email" type="text" placeholder="Introduce your email" />
+          <input type="email" placeholder="Introduce your email" />
         </label>
-        <label htmlFor="password">
+        <label>
           Password
-          <input
-            id="password"
-            type="password"
-            placeholder="Introduce your password"
-          />
+          <input type="password" placeholder="Introduce your password" />
         </label>
-        <label htmlFor="image">
+        <label>
           Image
-          <input id="image" type={"file"} placeholder="Introduce an image" />
+          <input type="file" placeholder="Introduce an image" />
         </label>
         <Button text="Sign up" />
       </form>
