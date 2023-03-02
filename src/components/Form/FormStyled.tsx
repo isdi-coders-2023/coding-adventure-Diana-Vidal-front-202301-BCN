@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-const FormStyled = styled.section`
+const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   padding: 10px;
+  gap: 48px;
+
+  .form {
+    &__required-text {
+      color: ${(props) => props.theme.requiredText};
+    }
+  }
 
   label {
     display: flex;
@@ -30,18 +36,6 @@ const FormStyled = styled.section`
     border: 1px solid #fff;
     margin-bottom: 9px;
     gap: 30px;
-  }
-
-  .form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 48px;
-
-    &__required-text {
-      color: ${(props) => props.theme.requiredText};
-    }
   }
 
   @media (min-width: 850px) {
