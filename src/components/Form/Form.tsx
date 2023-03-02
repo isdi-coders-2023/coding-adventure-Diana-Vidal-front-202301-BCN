@@ -1,28 +1,29 @@
 import Button from "../Button/Button";
+import FormStyled from "./FormStyled";
 
-interface FormProps {
-  submitForm: () => void;
-}
-
-const Form = ({ submitForm }: FormProps): JSX.Element => {
+const Form = (): JSX.Element => {
   return (
-    <>
-      <form className="form">
-        <label>
-          Email
-          <input type="email" placeholder="Introduce your email" />
-        </label>
-        <label>
-          Password
-          <input type="password" placeholder="Introduce your password" />
-        </label>
-        <label>
-          Image
-          <input type="file" placeholder="Introduce an image" />
-        </label>
-        <Button text="Sign up" />
-      </form>
-    </>
+    <FormStyled>
+      <label>
+        Email
+        <input type="email" placeholder="Introduce your email" />
+        <span
+          hidden
+          className="form__required-text form__required-text--hidden"
+        >
+          Email is required
+        </span>
+      </label>
+      <label>
+        Password
+        <input type="password" placeholder="Introduce your password" />
+      </label>
+      <label>
+        Image
+        <input type="file" placeholder="Introduce an image for your profile" />
+      </label>
+      <Button text="Sign up" />
+    </FormStyled>
   );
 };
 
