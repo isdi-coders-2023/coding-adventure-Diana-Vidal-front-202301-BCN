@@ -14,6 +14,8 @@ const Form = (): JSX.Element => {
     setPassword(event.target.value);
   };
 
+  const isDisabled = email === "" && password === "";
+
   return (
     <FormStyled>
       <label>
@@ -44,7 +46,7 @@ const Form = (): JSX.Element => {
         Image
         <input type="file" placeholder="Introduce an image for your profile" />
       </label>
-      <Button text="Sign up" />
+      <Button isDisabled={isDisabled} text="Sign up" />
     </FormStyled>
   );
 };
